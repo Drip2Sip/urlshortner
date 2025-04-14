@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vivek's URL Shortener</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function copyToClipboard() {
+            const urlText = document.getElementById("short-url").textContent;
+            navigator.clipboard.writeText(urlText).then(() => {
+                alert("Shortened URL copied to clipboard!");
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Vivek Kumar</div>
+        <nav>
+            <a href="#shortener">Shortener</a>
+            <a href="#about">About Me</a>
+        </nav>
+    </header>
+
+    <section id="shortener" class="shortener-section">
+        <div class="shortener-card animate">
+            <h1>URL Shortener</h1>
+            <form method="get" action="/">
+                <input type="text" name="name" placeholder="Paste your long URL here..." required>
+                <button type="submit">Shorten It</button>
+            </form>
+            {% if shorter_url %}
+                <div class="result">
+                    <p><strong>Shortened URL:</strong></p>
+                    <a id="short-url" href="{{ shorter_url }}" target="_blank">{{ shorter_url }}</a>
+                    <br><br>
+                    <button onclick="copyToClipboard()" class="copy-btn">Copy URL</button>
+                </div>
+            {% endif %}
+        </div>
+    </section>
+
+    <section id="about" class="about-section animate">
+        <h2>About the Developer</h2>
+        <p>Hi! I'm <strong>Vivek Kumar</strong>, a passionate Computer Science Engineering student who loves turning ideas into working web apps.</p>
+        <p><strong>Email:</strong> <a href="mailto:vivekumar454@gmail.com">vivekumar454@gmail.com</a></p>
+        <p><strong>Phone:</strong> +91-8847302071</p>
+    </section>
+
+    <section class="project-desc animate">
+        <h2>📌 Project Description</h2>
+        <p>This project is a <strong>URL Shortener Web App</strong> built using Flask and Python.</p>
+        <ul>
+            <li>🧠 Uses <code>pyshorteners</code> to generate short URLs</li>
+            <li>💻 Designed with HTML + CSS and a clean layout</li>
+            <li>📱 Mobile responsive</li>
+            <li>✅ Includes Copy to Clipboard, animations, and navigation</li>
+        </ul>
+        <p>Perfect for quick sharing of long links. Hope you like it! 😊</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Vivek Kumar. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
