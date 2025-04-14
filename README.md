@@ -32,7 +32,7 @@ Clone the repository
 bash
 Copy
 Edit
-git clone https://github.com/your-username/url-shortener.git
+git clone https://github.com/Itzvivek18/url-shortener.git
 cd url-shortener
 Install dependencies
 
@@ -50,7 +50,7 @@ Visit http://localhost:5000 in your browser.
 
 🌐 Deployed Version
 Check out the live version here:
-https://your-render-url.onrender.com
+[https://your-render-url.onrender.com](https://url-c1ri.onrender.com)
 
 📦 Deployment (Render)
 Push the project to GitHub.
