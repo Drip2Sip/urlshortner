@@ -1,0 +1,172 @@
+/* Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav a {
+    color: #fff;
+    margin-left: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ccff;
+}
+
+/* URL Shortener Section */
+.shortener-section {
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shortener-card {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+}
+
+.shortener-card h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.copy-btn {
+    background-color: #007BFF;
+    margin-top: 10px;
+}
+
+.copy-btn:hover {
+    background-color: #0056b3;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+.result a {
+    color: #007BFF;
+    word-break: break-all;
+}
+
+/* About Section */
+.about-section {
+    background-color: #f7f7f7;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.about-section a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.about-section a:hover {
+    text-decoration: underline;
+}
+
+/* Project Description */
+.project-desc {
+    background: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.project-desc h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.project-desc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-desc li {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate {
+    animation: fadeIn 1s ease-in;
+}
